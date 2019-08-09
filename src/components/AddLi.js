@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 // 함수형 컴포넌트
-const AddLi = (props) => {
+const AddLi = memo((props) => {
     let inputBox = null;
 
     const onClickAdd = () => {
         props.updateAddData(inputBox.value);
+        inputBox.value = '';
+        inputBox.focus();
     }
 
     return(
@@ -17,7 +19,7 @@ const AddLi = (props) => {
 		    </span>
         </div>
     );
-}
+});
 
 AddLi.propTypes = {
     onClickAdd: PropTypes.func

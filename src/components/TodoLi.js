@@ -1,5 +1,10 @@
-import React from "react";
+import React, {memo} from "react";
  
+// react.memo
+//https://ko.reactjs.org/docs/react-api.html#reactmemo
+//https://scotch.io/tutorials/react-166-reactmemo-for-functional-components-rendering-control
+//https://engineering.huiseoul.com/react-16-6-new-features-memo-lazy-etc-452c78ace739
+
 const TodoLi = (props) => {
 
     const onClickRemove = () => {      
