@@ -39,3 +39,7 @@ package-lock.json
 
 # Bundle File
 dist/
+
+# etc
+package-lock.json
+.DS_Store

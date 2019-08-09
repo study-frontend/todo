@@ -1,4 +1,5 @@
 import React, { Component, Suspense, lazy } from "react";
+import {hot} from 'react-hot-loader';
 
 import AddLi from "../components/AddLi";
 import Title from "../components/Title";
@@ -59,7 +60,7 @@ class Todo extends Component {
     // componentWillUpdate() {
     //     console.log('componentWillUpdate'); // devserver init2
     // }
-    
+
     componentDidUpdate() {
         console.log('componentDidUpdate'); // devserver init3
     }
@@ -124,4 +125,5 @@ class Todo extends Component {
     }
 }
 
-export default Todo;
+export default hot(module)(Todo);
+//export default Todo;
